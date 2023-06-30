@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Homework</string>
+    <string name="nametext_name">Имя</string>
+    <string name="heighttext_name">Рост</string>
+    <string name="weighttext_name">Вес</string>
+    <string name="agetext_name">Возраст</string>
+    <string name="button_name">Узнать</string>
+    <string name="starttext">Узнай свой процент по вкладу</string>
+
+</resources>
