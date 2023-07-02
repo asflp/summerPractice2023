@@ -55,7 +55,8 @@ class SelectedSongFragment : Fragment(R.layout.fragment_selected_song) {
         private const val ARG_URL = "ARG_URL"
         private const val ARG_PICTURE = "ARG_PICTURE"
 
-        fun createBundle(song: Song): Bundle {
+        fun createBundle(id: Int): Bundle {
+            var song = SongRepository.findSongById(id)
             val bundle = Bundle()
             bundle.putString(ARG_TITLE, song.name)
             bundle.putString(ARG_SINGER, song.singer)

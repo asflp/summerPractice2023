@@ -75,23 +75,26 @@ object SongRepository {
                     "Источник фонограммы\n" +
                     "Alpha", picture = R.drawable.umbrella),
 
-        Song(id = 21232, url = "https://music.yandex.ru/album/5313/track/637882",
+        Song(id = 26432, url = "https://music.yandex.ru/album/5313/track/637882",
             name = "Umbrella", singer = "Rihanna, Jay-Z", description = "Автор текста\n" +
                     "Terius Nash, Shawn Carter, Thaddis Laphonia Harrell\n" +
                     "Источник фонограммы\n" +
                     "The Island Def Jam", picture = R.drawable.umbrella),
 
-        Song(id = 21232, url = "https://music.yandex.ru/album/5313/track/637882",
+        Song(id = 21332, url = "https://music.yandex.ru/album/5313/track/637882",
             name = "Umbrella", singer = "Rihanna, Jay-Z", description = "Автор текста\n" +
                     "Terius Nash, Shawn Carter, Thaddis Laphonia Harrell\n" +
                     "Источник фонограммы\n" +
                     "The Island Def Jam", picture = R.drawable.umbrella),
 
-        Song(id = 21232, url = "https://music.yandex.ru/album/5313/track/637882",
-            name = "Umbrella", singer = "Rihanna, Jay-Z", description = "Автор текста\n" +
-                    "Terius Nash, Shawn Carter, Thaddis Laphonia Harrell\n" +
-                    "Источник фонограммы\n" +
-                    "The Island Def Jam", picture = R.drawable.umbrella),
-
+        Song(id = 0, url = "-",
+            name = "-", singer = "-", description = "-", picture = R.drawable.notes)
         )
+
+    fun findSongById(id: Int): Song{
+        for(n in 1..list.size){
+            if(list[n].id == id) return list[n]
+        }
+        return list[list.size - 1]
+    }
 }

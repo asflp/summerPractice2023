@@ -32,7 +32,7 @@ class ListFragment : Fragment(R.layout.fragment_list){
             onItemClick = { song ->
                 findNavController().navigate(
                     R.id.action_listFragment2_to_selectedSongFragment,
-                    SelectedSongFragment.createBundle(song)
+                    SelectedSongFragment.createBundle(song.id)
                 )
             }
         )
