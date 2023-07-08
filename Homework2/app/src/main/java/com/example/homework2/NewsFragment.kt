@@ -17,6 +17,15 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentNewsBinding.bind(view)
+
+        binding?.run{
+            button.setOnClickListener{
+                findNavController().navigate(
+                    R.id.action_newsFragment_to_differentFragment,
+                    DifferentFragment.createBundle("News Fragment")
+                )
+            }
+        }
     }
 
     override fun onDestroyView() {

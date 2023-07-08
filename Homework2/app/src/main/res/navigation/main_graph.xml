@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_newsFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
+        <action
+            android:id="@+id/action_newsFragment_to_differentFragment"
+            app:destination="@id/differentFragment" />
     </fragment>
     <fragment
         android:id="@+id/messageFragment"
@@ -39,6 +42,9 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_messageFragment_to_differentFragment"
+            app:destination="@id/differentFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -61,6 +67,9 @@
         <action
             android:id="@+id/action_profileFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_differentFragment"
+            app:destination="@id/differentFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -83,6 +92,9 @@
         <action
             android:id="@+id/action_settingsFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_differentFragment"
+            app:destination="@id/differentFragment" />
     </fragment>
     <fragment
         android:id="@+id/musicFragment"
@@ -96,5 +108,29 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_musicFragment_to_differentFragment"
+            app:destination="@id/differentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/differentFragment"
+        android:name="com.example.homework2.DifferentFragment"
+        android:label="fragment_different"
+        tools:layout="@layout/fragment_different" >
+        <action
+            android:id="@+id/action_differentFragment_to_musicFragment"
+            app:destination="@id/musicFragment" />
+        <action
+            android:id="@+id/action_differentFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+        <action
+            android:id="@+id/action_differentFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_differentFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_differentFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
 </navigation>
